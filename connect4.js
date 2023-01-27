@@ -1,20 +1,14 @@
-
-
 const WIDTH = 7;
 const HEIGHT = 6;
 
 let currPlayer = 1; 
 let board = []; 
 
-
-
 function makeBoard() {
   for (let y = 0; y < HEIGHT; y++) {
     board.push(Array.from({ length: WIDTH }));
   }
 }
-
-
 
 function makeHtmlBoard() {
   const board = document.getElementById('board');
@@ -32,7 +26,7 @@ function makeHtmlBoard() {
 
   board.append(top);
 
-  // make main part of board
+ 
   for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement('tr');
 
@@ -46,8 +40,6 @@ function makeHtmlBoard() {
   }
 }
 
-
-
 function findSpotForCol(x) {
   for (let y = HEIGHT - 1; y >= 0; y--) {
     if (!board[y][x]) {
@@ -56,8 +48,6 @@ function findSpotForCol(x) {
   }
   return null;
 }
-
-
 
 function placeInTable(y, x) {
   const piece = document.createElement('div');
@@ -68,8 +58,6 @@ function placeInTable(y, x) {
   const spot = document.getElementById(`${y}-${x}`);
   spot.append(piece);
 }
-
-
 
 function endGame(msg) {
   alert(msg);
