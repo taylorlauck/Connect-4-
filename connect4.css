@@ -1,0 +1,32 @@
+#board td {
+  height: 100px;
+  width: 100px;
+    border: solid 10px rgb(60, 7, 7);
+    background-color: rgb(225, 53, 180);
+    }
+  
+  
+  .piece {
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+  
+  .piece.p1 {
+    background-color: rgb(94, 255, 175);
+  }
+  
+  .piece.p2 {
+    background-color: rgb(1, 1, 18);
+  }
+  
+  
+  #column-top td {
+    border: dashed 1px lightgray;
+  }
+  
+  #column-top td:hover {
+    background-color: gold;
+  }
+  
